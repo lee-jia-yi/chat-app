@@ -11,7 +11,7 @@ import Messages from "../Messages/Messages";
 import TextContainer from "../TextContainer/TextContainer";
 
 let socket;
-const ENDPOINT = 'https://chat-application-e004e706ecfc.herokuapp.com/';
+const ENDPOINT = 'localhost:3001';
 
 const Chat = () => {
     const location = useLocation();
