@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './ChatInfoBar.css';
 
-const now = Date.now();
 const msIn1Min = 60000;
 const msIn1hour = msIn1Min * 60;
 const msIn24hours = 24 * msIn1hour;
@@ -11,10 +10,15 @@ const ChatInfoBar = ({ currentChat, setCurrentChat, isCurrentChatOnline }) => {
     const [lastSeenText, setLastSeenText] = useState('');
 
     useEffect(() => {
-        const diffInMs = now - currentChat.lastSeenAt;
-        if (diffInMs < msIn1hour) {
+        const diffInMs = Date.now() - currentChat.lastSeenAt;
+        if ((Date.now() - currentChat.lastSeenAt) < msIn1hour) {
             const lastSeenMinsAgo = Math.floor(diffInMs / msIn1Min);
-            setLastSeenText(`Last seen ${lastSeenMinsAgo} ${lastSeenMinsAgo === 1 ? "min" : "mins"} ago`);
+            if (lastSeenMinsAgo === 0) {
+                setLastSeenText('Last seen recently');
+            }
+            else {
+                setLastSeenText(`Last seen ${lastSeenMinsAgo} ${lastSeenMinsAgo === 1 ? "min" : "mins"} ago`);
+            }
         } else if (diffInMs <= msIn24hours) {
             const lastSeenHoursAgo = Math.floor(diffInMs / msIn1hour);
             setLastSeenText(`Last seen ${lastSeenHoursAgo} ${lastSeenHoursAgo === 1 ? "hour" : "hours"} ago`);
