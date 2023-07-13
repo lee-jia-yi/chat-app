@@ -66,7 +66,6 @@ const SetAvatar = () => {
     };
 
     if (isLoading) return <Loader />;
-
     return (
         <>
             <div className="avatar__container">

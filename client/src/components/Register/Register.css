@@ -36,7 +36,7 @@
   padding: 0.8rem;
   border: 0.2rem solid var(--color-accent-variant);
   border-radius: 0.8rem;
-  color: var(--color-darkergrey);
+  color: var(--color-darkgrey);
   width: 100%;
   font-size: 1rem;
   &:focus {

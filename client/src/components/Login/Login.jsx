@@ -54,7 +54,6 @@ const Login = () => {
                 password,
             });
 
-            console.log('data', data);
             if (data.status === 200) {
                 localStorage.setItem("chat-app-user", JSON.stringify(data.user));
                 navigate("/");

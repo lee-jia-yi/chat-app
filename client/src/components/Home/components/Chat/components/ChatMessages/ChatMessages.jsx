@@ -27,7 +27,7 @@ const ChatMessages = ({ messages }) => {
                 return (
                     <React.Fragment
                         key={uuidv4()}>
-                        {(!date || message.createdDate != date) && renderDate(message.createdDate)}
+                        {(!date || message.createdDate !== date) && renderDate(message.createdDate)}
                         <div
                             className={`message__wrapper ${message.fromSelf ? "sent" : "received"}`}
                         >

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import './ChatInput.css';
 
-const ChatInput = ({ message, setMessage, sendMessage, currentChat }) => {
-    const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+const ChatInput = ({ message, setMessage, sendMessage }) => {
 
     return (
         <div className="ChatInput">

@@ -10,7 +10,6 @@ import './Home.css';
 import Loader from "../Loader/Loader";
 
 import io from 'socket.io-client';
-import moment from 'moment';
 
 const Home = () => {
     const socket = useRef();

@@ -13,21 +13,14 @@
 :root {
   --color-lightgrey: #bebebe;
   --color-grey: #434651;
-  --color-darkgrey: #353535;
-  --color-darkergrey: #18191b;
-
+  --color-darkgrey: #18191b;
   --color-greybg: #242424;
   --color-black: black;
   --color-white: white;
-  --color-green: #1e6404;
   --color-chatBg: #f3f3f3;
   --color-bg: #131324;
-
-
-
   --color-accent: #9e599a;
   --color-accent-variant: #643962;
-
   --color-hoverbg: #e4e8eb18;
 
   --transition: all 500ms ease;
