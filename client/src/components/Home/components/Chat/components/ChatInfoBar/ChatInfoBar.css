@@ -1,0 +1,90 @@
+.infoBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-greybg);
+  border-radius: 0 5px 0 0;
+  height: 75px;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+/* .leftInnerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.leftInnerContainer {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  margin-left: 15px;
+  gap: 8px;
+  font-size: 14px;
+  position: relative;
+} */
+.leftInnerContainer {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  position: relative;
+  margin-left: 15px;
+  gap: 8px;
+}
+
+.leftInnerContainer .avatar img {
+  width: 45px;
+  height: 45px;
+  aspect-ratio: 1/1;
+}
+
+.leftInnerContainer p {
+  color: var(--color-lightgrey);
+}
+
+.activityIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 26px;
+  top: 28px;
+  transform: scale(1.5);
+}
+
+.activityIcon.red svg {
+  fill: red;
+}
+
+.activityIcon.green svg {
+  fill: #07bc0c;
+}
+
+.rightInnerContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  padding: 1.2%;
+  border-radius: 5px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.rightInnerContainer svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.rightInnerContainer:hover {
+  background-color: var(--color-hoverbg);
+
+  & svg {
+    fill: var(--color-lightgrey);
+  }
+}

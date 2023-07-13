@@ -1,0 +1,196 @@
+.sidebar {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  border-top: 1px solid var(--color-greybg);
+}
+
+.contacts::-webkit-scrollbar {
+  width: 0.2rem;
+  display: unset;
+}
+
+.contacts::-webkit-scrollbar-thumb {
+  background-color: #ffffff39;
+  width: 0.1rem;
+  border-radius: 5px;
+}
+
+.contact {
+  min-height: 4.5rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1.5rem;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.username {
+  display: inherit;
+}
+
+.contact__activityIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.25);
+}
+
+.contact__activityIcon.red svg {
+  fill: red;
+}
+
+.contact__activityIcon.green svg {
+  fill: #07bc0c;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar img {
+  height: 2.5rem;
+  transition: 0.5s ease-in-out;
+}
+
+.username h3 {
+  color: var(--color-white);
+  transition: 0.5s ease-in-out;
+  font-size: 1em;
+}
+
+.contact.selected {
+  background-color: var(--color-accent);
+}
+
+.currentUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem;
+}
+
+.currentUser .username {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+.currentUser .username h2 {
+  color: var(--color-white);
+  text-transform: capitalize;
+  transition: 0.5s ease-in-out;
+  font-size: 0.9em;
+  word-break: break-word;
+  padding-left: 10px;
+}
+.currentUser .username .logout-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: var(--transition);
+  width: fit-content;
+  color: var(--color-grey);
+  background: transparent;
+}
+
+.currentUser .username .logout-btn svg {
+  fill: var(--color-grey);
+  transition: var(--transition);
+}
+
+.currentUser .username .logout-btn:hover {
+  background-color: var(--color-hoverbg);
+  color: var(--color-lightgrey);
+
+  & svg {
+    fill: var(--color-lightgrey);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .avatar img {
+    height: 2em;
+  }
+
+  .username h2 {
+    font-size: 0.8em;
+  }
+
+  .username h3 {
+    font-size: 0.8em;
+  }
+  .contact {
+    min-height: 3rem;
+    padding: 0.5em 1em;
+    gap: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 719px) {
+  .avatar img {
+    min-height: 1.5em;
+    height: 2em;
+  }
+
+  .username h2 {
+    font-size: 0.8em;
+  }
+  .username h3 {
+    font-size: 0.6em;
+  }
+}
+
+/* hide names show only icons; 768px and below tablet and below */
+@media screen and (max-width: 768px) {
+  .avatar img {
+    height: 2em;
+  }
+
+  .contacts {
+    align-items: flex-start;
+    width: 100%;
+    min-height: 3em;
+  }
+
+  .contact {
+    gap: 0;
+    width: 100%;
+    padding: inherit;
+    justify-content: center;
+    min-height: 4rem;
+  }
+
+  .currentUser .username,
+  .username {
+    display: none;
+  }
+
+  .currentUser {
+    justify-content: center;
+    margin: 2rem auto;
+  }
+
+  .sidebar {
+    align-items: center;
+  }
+}

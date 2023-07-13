@@ -1,0 +1,30 @@
+.defaultChat {
+  background-color: var(--color-greybg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.defaultChat p {
+  text-transform: capitalize;
+  color: var(--color-white);
+  margin: 1em;
+  width: 100%;
+  word-break: break-word;
+  text-align: center;
+}
+
+.lottie-animation {
+  width: 100%;
+  max-width: 250px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .lottie-animation {
+    width: 100%;
+    max-width: 150px;
+  }
+}

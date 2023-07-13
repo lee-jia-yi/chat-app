@@ -1,14 +1,20 @@
 import React from "react";
-import Join from './components/Join/Join'
-import Chat from './components/Chat/Chat'
+import Register from './components/Register/Register';
+import SetAvatar from './components/SetAvatar/SetAvatar';
 
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from "./components/Login/Login";
+import Home from "./components/Home/Home";
 
 const App = () => (
- <Routes>
-  <Route path="/" element={<Join />} />
-  <Route path="/chat" element={<Chat />} />
- </Routes>
-)
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/setAvatar" element={<SetAvatar />} />
+        </Routes>
+    </BrowserRouter>
+);
 
 export default App;

@@ -1,0 +1,43 @@
+.ChatInput {
+  display: flex;
+  width: 100% !important;
+  transition: var(--transition);
+  margin: 0;
+  background: transparent;
+  margin-top: 10px;
+}
+
+.ChatInput__input {
+  padding: 2.5%;
+  width: 85%;
+  font-size: 1em;
+  background-color: var(--color-white);
+  color: var(--color-gray);
+  height: 60px !important;
+  overflow-y: auto;
+  border-radius: 0;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.sendButton {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--color-accent);
+  padding: 10px;
+  display: inline-block;
+  width: 15%;
+  font-size: 1em;
+  border-radius: 0 0 5px 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sendButton:hover {
+  background-color: var(--color-accent-variant);
+}
