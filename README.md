@@ -1,6 +1,8 @@
-This is a Real-Time Online Chat Application, where users can join chatrooms and make conservations.
+Chat X Tgt is a Real-Time chat app, where anyone can create an account and chat away!
+React.js is used for the Frontend, while Node.js, Express.js, Socket.io and MongoDB are employed to build a robust server-side infrastructure. I explored the use of websockets in implementing bidirectional events between client and server, enabling seamless communication for instant mesage delivery and updates such as online activity and last seen statuses.
 
-React.js is used on the Frontend, while Node.js, Express.js and Socket.io is employed to build a robust server-side infrastructure. I explored the use of websockets in implementing bidirectional events between client and server, enabling seamless communication for instant mesage delivery and chat updates.
+More Features: Work In progress
+
 
 # Setting up:
 
